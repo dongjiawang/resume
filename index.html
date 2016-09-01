@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="static/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait"></div>
+                <div class="remodal remodal-img" data-remodal-id="portrait-modal">
+                    <h3>请输入图片URL地址：</h3>
+                    <br/>
+                    <input type="text" id="avatar-url">
+                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+                </div>
+                <h1 id="username" >董佳旺</h1>
+                <h4 id="persona-tag" >iOS开发工程师</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xec88;</i> <span class="info-title">基本信息</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">学历</label><span class="label-value">大专</span></li>
+                    <li>
+                        <label class="left-label">毕业院校</label><span class="label-value">河北建材职业技术学院</span></li>
+                    <li>
+                        <label class="left-label">毕业年份</label><span class="label-value">2012</span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xeab6;</i> <span class="info-title">联系方式</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">手机</label><span class="label-value">177XXXXXXXX</span></li>
+                    <li>
+                        <label class="left-label">邮箱</label><span class="label-value">dongjiawang2008@163.com</span></li>
+                    <li>
+                    <label class="left-label">个人主页</label><span class="label-value">http://www.jianshu.com/users/b3f4cfd26f4c/latest_articlesm</span></li>
+                </ul>
+            </div>
+            <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xed1d;</i> <span class="info-title">技能点</span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label">Objective-C</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">Swift</label>
+                        <progress value="50" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">C/C++</label>
+                        <progress value="40" max="100"></progress>
+                    </li>
+                </ul>
+            </div>
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xeaa2;</i> <span class="info-title">技术栈</span></h2>
+                <hr>
+                <ul class="stack-list">
+                    <li>
+                        <label class="left-label">基础技能</label><span class="label-value">熟悉MVC、代理、单例、观察者等常用设计模式，熟悉网络处理、多线程及数据储存</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">第三方框架</label><span class="label-value">AFN、SDWebImage、MJExtension、masonry、shareSDK、百度地图等等</span></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont">&#x3488;</i> <span class="info-title">个人微信</span></h2>
+                <hr>
+                <div class="weixin">
+                    <img src="static/image/weixin.png" alt="">
+
+                </div>
+            </div>
+            <div class="remodal remodal-img" data-remodal-id="weixin-modal">
+                <h3>请输入图片URL地址：</h3>
+                <br/>
+                <input type="text" id="weixin-url">
+                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="education info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xebca;</i> <span class="info-title">教育经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>2015/5- 至今    北京通铭教育科技股份有限公司</h3>
+                        <p>iOS客户端的开发及维护，独立负责手机学堂项目的改版、功能改进、性能优化及维护工作；</p>
+                        <p>与同事一起承担沃学堂项目的开发和维护工作；</p>
+                        <p>技术文档的整理和更新</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="work info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xeac9;</i> <span class="info-title">工作经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>2013/10-2015/4    北京云图微动科技有限公司</h3>
+                        <p>主要参与技术文件的整理，维护已开发的项目，增加新功能，修复存在的bug，参与模块的设计和开发
+                        </p>
+                    </li>
+                    <li>
+                        <h3>2012/9-2013/8    北京天睿兴辉科技有限公司</h3>
+                        <p>维护和开发公司已有的iOS项目，修复测试人员提交的bug
+                        </p>
+                    </li>
+                </ul class="experience-list">
+            </div>
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xeaf4;</i> <span class="info-title">个人项目</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>手机学堂</h3>
+                        <p>
+                            中国移动定制企业内部使用的教育类APP，通过APP学习公司设置的视频课程，浏览最新的资讯和文档，记录学员的学习足迹并计算积分，投票模块可以对置顶的课程进行评分和投票，主题模块有话题的讨论功能。<br/>
+                            动态的首页布局，后台控制课程模板展示位置和顺序，自定义的动态banner可以进入不同的模块<br>
+                            <br>
+                            测试版下载： https://beta.bugly.qq.com/t75t
+                            <br>    
+                        </p>
+                    </li>
+                    <li>
+                        <h3>沃学堂</h3>
+                        <p>
+                            中国联通定制的企业内部使用的教育类APP，公司人员通过APP学习指定的视频课程和文档.<br>个性化的考试功能，定期对学员进行考核。培训班可以指定某些人员进行学习并且查看签到情况.<br>
+                            <br>
+                            测试版下载：http://fir.im/unicomiPhone
+                            <br>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>玩图</h3>
+                        <p>
+                            画中画：创意十足的照片特效，适合自拍文艺十足的照片.<br>
+                            高清美化：无比强大的功能，包含：滤镜、光影、裁剪、旋转、场景、相框、荧光笔、字中字等功能.<br>
+                            经典拼图：长方形拼图、正方形拼图、自由拼图、圆角拼图等多重模板拼出个性的图片.<br>
+                            素材库：瀑布流展示海量的在线素材.<br>
+                            支持分享功能，将自己的个性照片分享到各个社交APP.<br>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>拼立得D</h3>
+                        <p>
+                            选择个性的模板，拼接出自己喜爱的图片，文字可编辑、移动，可以打标签，制作充满差异化的照片，拥有海量的模板库，随时更新最新并进行下载
+                        </p>
+                    </li>
+                     <li>
+                        <h3>最美家居</h3>
+                        <p>
+                            根据用户不同的喜好，对店铺、家居用品细心的分类展示，家居配图文字可编辑，饰品可以移动，制作个性的家居用例.<br>
+                            及时更新最流行的家居设计.<br>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="aboutme info-unit right-paragraph">
+                <h2 class="info-header"><i class="iconfont">&#xec0a;</i> <span class="info-title">自我评价</span></h2>
+                <hr>
+                <p>
+                    熟练掌握C 、Objective-C编程语言，熟练掌握IOS开发项目开发流程，熟悉项目模块的开发，熟练掌握MVC、代理、单例、KVO等设计模式，有扎实的开发能力,具备独立开发经验,善于学习新知识.<br>
+                    有较强的时间观念以及较强的逻辑分析和独立解决问题的能力，良好的代码编程习惯，善于封装常用工具类，适应能力强，能够快速的学习并使用新知识.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
