@@ -2,20 +2,23 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>iOS开发工程师</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -24,14 +27,14 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -43,11 +46,11 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
+figure > table { margin: 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -63,8 +66,8 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -72,32 +75,36 @@ div.hr:focus { cursor: none; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -126,77 +133,333 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
+
+/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 :root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --text-color: #202124;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --drake-accent: #5784ec;
+    --drake-highlight: #3a474e;
+    --a-color: #1769e0;
+    --variable-color: #d01884;
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f9fa;
+    --code-block-color: #3a474e;
+    --title-color: #202124;
+    --blockquote-border-color: #275796;
+    --blockquote-color: #275796;
+    --blockquote-bg-color: #e5f4fd;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--text-color);
+    --height-light-border-color: var(--text-color);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dadce0;
+    --table-header-bg-color: #f1f3f4;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
 html {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.8rem;
+}
+
+/*code block*/
+#write .md-fences {
+    font-size: 1rem;
+    padding: 12px !important;
+    border-radius: 8px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: .1em solid #e8eaed;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 4px;
+    color: var(--drake-highlight);
+    border: .1rem solid #e8eaed;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: .1rem .4rem;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote {
+    color: var(--blockquote-color) !important;
+    border-radius: 4px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a .md-plain:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+.md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+#write a code, a:any-link {
+    color: var(--a-color);
+}
+#write a code:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1em;
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
 }
 
 #write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
 }
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write p {
+    word-spacing: .05rem;
+}
+
 #write > ul:first-child,
-#write > ol:first-child{
+#write > ol:first-child {
     margin-top: 30px;
 }
 
-a {
-    color: #4183C4;
+body > *:first-child {
+    margin-top: 0 !important;
 }
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    font-family: var(--title-font);
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    line-height: 1.4;
     cursor: text;
+    color: var(--title-color);
 }
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
 h1:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,
@@ -205,125 +468,150 @@ h5:hover a.anchor,
 h6:hover a.anchor {
     text-decoration: none;
 }
+
 h1 tt,
 h1 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h2 tt,
 h2 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h3 tt,
 h3 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h4 tt,
 h4 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h5 tt,
 h5 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h6 tt,
 h6 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
-h1 {
-    padding-bottom: .3em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-   padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
+
 blockquote,
 ul,
 ol,
 dl,
-table{
+table {
     margin: 0.8em 0;
 }
-li>ol,
-li>ul {
+p {
+    margin: 0;
+}
+
+li > ol,
+li > ul {
     margin: 0 0;
 }
+
 hr {
     height: 2px;
     padding: 0;
     margin: 16px 0;
-    background-color: #e7e7e7;
+    background-color: var(--horizontal-divider-color);
     border: 0 none;
     overflow: hidden;
     box-sizing: content-box;
 }
 
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
 li p.first {
     display: inline-block;
 }
-ul,
-ol {
-    padding-left: 30px;
+
+ul, ol {
+    padding-inline-start: 2em;
 }
+
 ul:first-child,
 ol:first-child {
     margin-top: 0;
 }
+
 ul:last-child,
 ol:last-child {
     margin-bottom: 0;
 }
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
+
 table {
     padding: 0;
     word-break: initial;
+    background-color: var(--table-bg-color);
 }
 table tr {
-    border-top: 1px solid #dfe2e5;
+    border-top: .1em solid var(--table-border-color);
     margin: 0;
     padding: 0;
 }
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table tr th {
+table th {
     font-weight: bold;
-    border: 1px solid #dfe2e5;
+    border: .1em solid var(--table-border-color);
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
-    border: 1px solid #dfe2e5;
+table td {
+    border: .1em solid var(--table-border-color);
     margin: 0;
     padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
 }
 table tr th:first-child,
 table tr td:first-child {
@@ -334,126 +622,207 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
-.CodeMirror-lines {
-    padding-left: 4px;
+#write em {
+    padding: 0 5px 0 2px;
 }
 
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
+#write table thead th {
+    background-color: var(--table-header-bg-color);
 }
 
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
 }
 
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    vertical-align: top;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
 }
 
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+#write del {
+    padding: 1px 2px;
 }
-
 
 .md-task-list-item > input {
-  margin-left: -1.3em;
+    margin-left: -1.3em;
 }
 
 @media print {
     html {
-        font-size: 13px;
+        font-size: 12px;
     }
+
     table,
     pre {
         page-break-inside: avoid;
     }
+
     pre {
         word-wrap: break-word;
     }
 }
 
-.md-fences {
-	background-color: #f8f8f8;
-}
+/*YAML*/
 #write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--yaml-bg-color);
     border: 0;
-    border-radius: 3px;
-    color: #777777;
+    border-radius: 2px;
+    color: var(--yaml-color);
     margin-top: 0 !important;
 }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
 }
 
-.md-mathjax-midline {
-    background: #fafafa;
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
 }
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
     color: inherit;
 }
 
 .md-tag {
-    color: #a7a7a7;
-    opacity: 1;
+    color: inherit;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
-.sidebar-tabs {
-    border-bottom: none;
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 #typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
 }
 
 /** focus mode */
@@ -461,51 +830,394 @@ code {
     border-left-color: rgba(85, 85, 85, 0.12);
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
 }
 
+/*sidebar*/
 .file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
+.file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
 
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
+#typora-sidebar {
+    font-size: 1.1rem;
 }
 
-.md-lang {
-    color: #b4654d;
+.sidebar-tabs {
+    border-bottom: none;
 }
 
-.html-for-mac .context-menu {
-    --item-hover-bg-color: #E6F0FE;
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
 }
 
-#md-notification .btn {
-    border: 0;
+.file-list-item-file-ext-part {
+    display: none;
 }
 
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
+.outline-item {
+    font-size: 1rem;
 }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
 }
 
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
+#write .md-footnote:before {
+    content: "[";
 }
 
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
-</style>
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner span.cm-number {
+    color: #c5221f;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #c5221f;
+}
+
+.cm-s-inner span.cm-def {
+    color: #00f;
+}
+
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #9334e6;
+}
+
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #1967d2;
+}
+
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-comment {
+    color: #b80672;
+}
+
+.cm-s-inner span.cm-string {
+    color: #008000;
+}
+
+.cm-s-inner span.cm-string-2 {
+    color: #008000;
+}
+
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-error {
+    color: red;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #9334e6;
+}
+
+.cm-s-inner span.cm-tag.cm-bracket {
+    color: #1967d2;
+}
+
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner .cm-meta {
+    color: #c5221f;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>iOS开发工程师</title>
 </head>
-<body class='typora-export' >
-<div  id='write'  class = 'is-mac'><center>
-    <h1>iOS开发工程师</h1>
-</center><p>&nbsp;</p><h2><a name="个人信息" class="md-header-anchor"></a><span>个人信息</span></h2><blockquote><p><span>姓名：董佳旺</span></p><p><span>电话：17701089347</span></p><p><span>邮箱：</span><a href='mailto:dongjiawang2008@163.com' target='_blank' class='url'>dongjiawang2008@163.com</a></p><p><span>性别：男</span></p><p><span>学历：大专</span></p></blockquote><hr /><blockquote><p><span>工作年限：5年</span></p><p><span>期望职位：iOS开发</span></p><p><span>期望薪资：15-20 K</span></p><p><span>期望城市：北京</span></p><p><span>工作状态：在职</span></p></blockquote><hr /><blockquote><p><span>博    客：</span><a href='https://dongjiawang.top'><span>https://dongjiawang.top</span></a></p><p><span>Github： </span><a href='https://github.com/dongjiawang'><span>https://github.com/dongjiawang</span></a></p><p><span>简     书： </span><a href='https://www.jianshu.com/u/b3f4cfd26f4c'><span>https://www.jianshu.com/u/b3f4cfd26f4c</span></a></p></blockquote><hr /><h2><a name="专业技能" class="md-header-anchor"></a><span>专业技能</span></h2><blockquote><ol start='' ><li><span>熟练掌握Objective-C，了解swift</span></li><li><span>熟练使用MVC、delegate、单例等常用设计模式</span></li><li><span>熟悉JSON/XML解析</span></li><li><span>熟悉CoreData，SQLite等数据存储方式</span></li><li><span>熟悉Cordova跨平台方式</span></li><li><span>熟悉社交分享，使用友盟SDK实现第三方分享功能</span></li><li><span>熟练使用常用的第三方框架</span></li><li><span>熟练使用多线程、block等开发方式</span></li><li><span>熟练使用CocoaPods第三方库管理工具</span></li><li><span>熟练使用Git、SVN版本控制工具</span></li><li><span>良好的编码风格</span></li></ol></blockquote><p>&nbsp;</p><h2><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h2><h4><a name="北京通铭教育科技股份有限公司2015年7月至今）" class="md-header-anchor"></a><span>北京通铭教育科技股份有限公司（2015年7月~至今）</span></h4><p><span>公司的主营业务是为大中小企业提供企业内部培训的平台，根据客户的需求，在公司平台的基础上，定制功能。</span></p><ul><li><p><strong><span>沃学堂</span></strong></p><p><span>中国联通网上学院的客户端，为联通内部培训提供学习和考试的平台。客户端主要提供的功能有文档查看、视频和音频播放、直播、话题讨论等。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><ol start='' ><li><span>老版本的功能迭代</span></li><li><span>新版本的重构和开发</span></li><li><span>混淆代码防止反编译</span></li><li><span>课程的学习功能（视频、音频播放，直播SDK的接入）</span></li><li><span>培训班学习（报名、话题讨论、包含课程学习）</span></li><li><span>封装AFN网络模块，实现自定义请求类型的调用（PUT、GET、POST），传输数据的格式使用枚举判断（JSON、form-data）</span></li><li><span>利用postman对接服务器的接口</span></li></ol></blockquote></li><li><p><strong><span>中移在线、中移党校</span></strong></p><p><span>专门为中国移动内部人员提供学习业务培训知识</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>负责个人中心、部分课程详情的学习功能、培训班</span></p><p><span>听书功能（在线音频播放）</span></p><p><span>动态首页排版</span></p><p><span>80%的APP功能和界面的开发和迭代</span></p></blockquote></li><li><p><strong><span>易学堂</span></strong></p><p><span>中国人寿内部培训使用，基于</span><code>Cordova</code><span>的跨平台项目。</span></p><p><strong><span>项目职责</span></strong></p><blockquote><p><span>iOS原生插件的创建</span></p><p><span>根据需求完成原生需要完成的功能模块（下载、人脸对比、活体扫描等）</span></p><p><span>配合前端进行</span><code>JavaScript</code><span>代码调试</span></p><p><span>混淆原生代码</span></p></blockquote></li><li><p><strong><span>企慕课堂</span></strong></p><p><span>公司自己学习平台的APP，可以在线学习上传的课程，观看直播或录播课程，可以学习标准课件等。</span></p><p><a href='http://www.qimooc.com'><span>企慕课堂官网  http://www.qimooc.com</span></a></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>基础框架搭建</span></p><p><span>网络请求添加防盗链</span></p><p><span>视频播放器的封装</span></p><p><span>模块的优化</span></p><p><span>维护、版本迭代</span></p><p><span>接入直播功能</span></p><p><span>接入分享功能</span></p></blockquote></li><li><p><strong><span>授课精灵</span></strong></p><p><span>讲师直播授课推流工具，是企业慕课在直播应用中为老师端设计的一款推流工具，打通教师与学生空间时间限制，可以远距离进行传输知识内容，节省企业与员工的培训成本。主要包含图像采集、音频采集、美颜效果、学生列表以及对应的课堂管理工具，讲师与学生一对多的学习场景。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>基础框架的搭建</span></p><p><span>接入阿里云推流</span></p><p><span>添加阿里云推流的美颜功能</span></p><p><span>接入阿里云旺即时聊天</span></p><p><span>版本的维护和迭代</span></p></blockquote></li><li><p><strong><span>小书客</span></strong></p><p><span>手机端制作培训课件的工具，可以制作视频、图文、音频课件。客户端方面我个人制作完成。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>基类的搭建</span></p><p><span>网络请求的封装</span></p><p><span>浏览本地相册图片、视频</span></p><p><span>视频的录制</span></p><p><span>视频编辑（图片、文字水印，多视频合成，增加视频背景音，播放速度调整）</span></p><p><span>音频的录制、记录音频课件的图片动画，最终合成视频课件</span></p><p><span>图文转成html展示</span></p></blockquote></li><li><p><strong><span>经销商培训</span></strong></p><p><span>为北京现代制作的DLMS经销商培训系统，可以在线和离线学习视频、文档及公司内部的标准课件课程。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>使用protobuf进行数据传输</span></p><p><span>定义某些界面和功能的protobuf文件</span></p><p><span>完成离线下载功能</span></p><p><span>使用CoreData保存离线数据</span></p><p><span>替换视频播放器为AVPlayer</span></p><p><span>图片添加水印功能</span></p><p><span>维护和迭代</span></p></blockquote></li></ul><h4><a name="北京云图微动科技有限公司2014年10月2015年6月）" class="md-header-anchor"></a><span>北京云图微动科技有限公司（2014年10月~2015年6月）</span></h4><p><span>主要参与技术文件的整理，维护已开发的项目，版本的更新，修复发现的BUG，参与模块的设计和开发。</span></p><ul><li><p><strong><span>玩图</span></strong></p><p><span>画中画功能，高清美化（滤镜、光影、裁剪、旋转、相框，字中字），拼图功能，数量庞大的素材库</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>维护现有的功能</span></p><p><span>添加字中字功能</span></p></blockquote></li><li><p><strong><span>拼立得</span></strong></p><p><span>选择个性的模板，拼接出自己喜爱的图片，文字可编辑、移动，可以打标签，制作充满差异化的照片，拥有海量的模板库，随时更新最新并进行下载。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>优化代码和逻辑</span></p><p><span>优化拼图功能</span></p><p><span>完善技术文档</span></p></blockquote></li></ul><h4><a name="北京天睿兴辉科技有限公司2013年10月2014年8月）" class="md-header-anchor"></a><span>北京天睿兴辉科技有限公司（2013年10月~2014年8月）</span></h4><p><span>维护和开发公司已有的iOS项目，修复测试人员提交的BUG。</span></p><ul><li><p><span>最美家居</span></p><p><span>根据用户不同的喜好，对店铺、家居用品细心的分类展示，家居配图文字可编辑，饰品可以移动，制作个性的家居用例。</span></p><p><strong><span>项目职责：</span></strong></p><blockquote><p><span>添加分类展示功能</span></p><p><span>优化图片的展示</span></p><p><span>文字编辑功能</span></p><p><span>项目的维护和迭代</span></p></blockquote></li></ul></div>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='个人信息'><span>个人信息</span></h2><figure><table><thead><tr><th><span>姓名 / 性别</span></th><th style='text-align:left;' ><span>董佳旺 / 男</span></th></tr></thead><tbody><tr><td><span>毕业院校</span></td><td style='text-align:left;' ><span>河北建材学院</span></td></tr><tr><td><span>电话 / 微信</span></td><td style='text-align:left;' ><span>17701089347  /  djw934738009</span></td></tr><tr><td><span>邮箱</span></td><td style='text-align:left;' ><a href='mailto:dongjiawang2008@163.com' target='_blank' class='url'>dongjiawang2008@163.com</a></td></tr><tr><td><span>工作年限</span></td><td style='text-align:left;' ><span>7 年</span></td></tr><tr><td><span>技术博客 / GitHub</span></td><td style='text-align:left;' ><a href='https://blog.dongjiawang.top' target='_blank' class='url'>https://blog.dongjiawang.top</a><span>  /  </span><a href='https://github.com/dongjiawang' target='_blank' class='url'>https://github.com/dongjiawang</a></td></tr><tr><td><span>求职意向</span></td><td style='text-align:left;' ><span>iOS 开发工程师</span></td></tr><tr><td><span>期望城市</span></td><td style='text-align:left;' ><span>北京</span></td></tr><tr><td><span>在职状态</span></td><td style='text-align:left;' ><span>在职</span></td></tr></tbody></table></figure><h2 id='专业技能'><span>专业技能</span></h2><ul><li><span>熟练掌握 Objective-C、ReactiveCocoa</span></li><li><span>熟练掌握 iOS 平台各类 API，熟悉 iOS 内存管理机制</span></li><li><span>熟悉网络数据(JSON/XML)的请求以及解析并转化模型</span></li><li><span>熟练使用代码写 UI,autolayout</span></li><li><span>熟悉 H5 与原生交互</span></li><li><span>了解 swift、Flutter</span></li><li><span>了解持续集成 Jenkins</span></li><li><span>熟练使用常用的第三方框架及 SDK</span></li><li><span>熟练使用多线程、block等开发方式</span></li><li><span>熟练使用 CocoaPods 第三方库管理工具</span></li><li><span>熟练使用 Git、SVN 版本控制工具</span></li><li><span>良好的编码风格</span></li></ul><h2 id='工作经历'><span>工作经历</span></h2><h4 id='正保远程教育2020年3月～2021年10月）'><span>正保远程教育（2020年3月～2021年10月）</span></h4><p><span>主要负责公司手机端、iPad 端的日常功能迭代，推进 App 架构的优化和编写，参与制定公司开发规范文档的编写，进行日常回报反馈及开发工作。</span></p><ul><li><p><strong><span>中华会计网校</span></strong></p><ul><li><span>推进 CTMediator 组件化优化</span></li><li><span>部分功能模块的解耦，独立封装为私有 Pod 库</span></li><li><span>持续集成 Jenkins 的搭建以及编译脚本的自定义，将私有 Pod 库编译为静态文件，优化日常开发过程中编译速度</span></li><li><span>封装 WKWebView 模块以及通过 WebViewJavascriptBridge 集成与 H5 页面的交互，进行 UIWebView 的替换工作</span></li><li><span>接入手机号一键登录功能</span></li><li><span>封装大文件多线程分片下载模块</span></li><li><span>日常功能迭代的进行</span></li></ul></li><li><p><strong><span>正保乐渔、会计继续教育</span></strong></p><ul><li><span>负责小版本功能迭代</span></li><li><span>日常版本更新的维护工作</span></li></ul></li></ul><h4 id='北京通铭教育科技股份有限公司2015年7月2020年3月）'><span>北京通铭教育科技股份有限公司（2015年7月~2020年3月）</span></h4><p><span>公司的主营业务是为大中小企业提供企业内部培训的平台，根据客户的需求，在公司平台的基础上，定制功能。</span></p><ul><li><p><strong><span>沃学堂</span></strong></p><ul><li><span>老版本的功能迭代</span></li><li><span>新版本的重构和开发</span></li><li><span>混淆代码防止反编译</span></li><li><span>课程的学习功能（视频、音频播放，直播SDK的接入）</span></li><li><span>培训班学习（报名、话题讨论、包含课程学习）</span></li><li><span>封装AFN网络模块，实现自定义请求类型的调用（PUT、GET、POST），传输数据的格式使用枚举判断（JSON、form-data）</span></li><li><span>利用 postman 对接服务器的接口</span></li></ul></li><li><p><strong><span>中移在线、中移党校</span></strong></p><ul><li><span>负责个人中心、部分课程详情的学习功能、培训班</span></li><li><span>听书功能（在线音频播放）</span></li><li><span>动态首页排版</span></li><li><span>APP功能和界面的开发和迭代</span></li></ul></li><li><p><strong><span>易学堂</span></strong></p><ul><li><span>iOS 原生插件的创建</span></li><li><span>根据需求完成原生需要完成的功能模块（下载、人脸对比、活体扫描等）</span></li><li><span>配合前端进行 JavaScript 代码调试</span></li><li><span>混淆原生代码</span></li></ul></li><li><p><strong><span>企慕课堂</span></strong></p><ul><li><span>基础框架搭建</span></li><li><span>网络请求添加防盗链</span></li><li><span>视频播放器的封装</span></li><li><span>模块的优化</span></li><li><span>维护、版本迭代</span></li><li><span>接入直播功能</span></li><li><span>接入分享功能</span></li></ul></li><li><p><strong><span>授课精灵</span></strong></p><ul><li><span>基础框架的搭建</span></li><li><span>接入阿里云推流</span></li><li><span>添加阿里云推流的美颜功能</span></li><li><span>接入阿里云旺即时聊天</span></li><li><span>版本的维护和迭代</span></li></ul></li><li><p><strong><span>小书客</span></strong></p><ul><li><span>基类的搭建</span></li><li><span>网络请求的封装</span></li><li><span>浏览本地相册图片、视频</span></li><li><span>视频的录制</span></li><li><span>视频编辑（图片、文字水印，多视频合成，增加视频背景音，播放速度调整）</span></li><li><span>音频的录制、记录音频课件的图片动画，最终合成视频课件</span></li><li><span>图文转成 html 展示</span></li></ul></li><li><p><strong><span>经销商培训</span></strong></p><ul><li><span>使用 protobuf 进行数据传输</span></li><li><span>定义某些界面和功能的 protobuf 文件</span></li><li><span>完成离线下载功能</span></li><li><span>使用 CoreData 保存离线数据</span></li><li><span>替换视频播放器为 AVPlayer</span></li><li><span>图片添加水印功能</span></li><li><span>日常维护和迭代</span></li></ul></li></ul><h4 id='北京云图微动科技有限公司2014年10月2015年6月）'><span>北京云图微动科技有限公司（2014年10月~2015年6月）</span></h4><p><span>主要参与技术文件的整理，维护已开发的项目，版本的更新，修复发现的BUG，参与模块的设计和开发。</span></p><ul><li><p><strong><span>玩图</span></strong></p><ul><li><span>维护和迭代功能</span></li><li><span>添加字中字功能</span></li></ul></li><li><p><strong><span>拼立得</span></strong></p><ul><li><span>优化代码和逻辑</span></li><li><span>优化拼图功能</span></li><li><span>完善技术文档</span></li></ul></li></ul><h4 id='北京天睿兴辉科技有限公司2013年10月2014年8月）'><span>北京天睿兴辉科技有限公司（2013年10月~2014年8月）</span></h4><ul><li><p><strong><span>最美家居</span></strong></p><ul><li><span>添加分类展示功能</span></li><li><span>优化图片的展示</span></li><li><span>文字编辑功能</span></li><li><span>项目的维护和迭代</span></li></ul></li></ul></div></div>
 </body>
 </html>
